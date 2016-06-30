@@ -1,0 +1,42 @@
+<style media="screen">
+
+</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACME Corp - Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/acme-corp-logo.jpg" alt="ACME CORP"/>
+      <div class="navigation">
+        <ul id="nav">
+          <li>Products</li>
+          <button class="signup" type="button" name="button">Sign Up</button>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1>Sign Up</h1>
+      <form class="form" action="index.html" method="post">
+      <div class="personal">
+          <ul>
+            <li><label for="first">First Name</label><input placeholder="John" type="text" id="first" required></input></li>
+            <li><label for="last">Last Name</label><input placeholder="Doe" type="text" id="last" required></input></li>
+            <li><label for="email">Email</label><input placeholder="john.doe@example.com" type="text" id="email" required></input></li>
+            <li><label for="password">Password</label><input type="text" id="password" required></input></li>
+          </ul>
+      </div>
+      <span><input type="checkbox" id="checkbox" required></input>Agree to our terms of service</span>
+      <button id="signup-body">Sign Up</button>
+      </form>
+    </main>
+    <hr></hr>
+    <footer>
+      <h6>Copyright, 2015</h6>
+    </footer>
+  </body>
+
+</html>

@@ -1,5 +1,5 @@
 <style media="screen">
-  html {
+  /*html {
     font-family: "Lucida Grande", Helvetica, sans-serif;
   }
   header {
@@ -77,22 +77,25 @@
   h6 {
     color: rgb(163, 167, 171);
     font-weight: 300;
-  }
+  } */
 
 </style>
+<!DOCTYPE html>
 <html>
   <head>
     <title>ACME Corp - Home</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
   </head>
   <body>
     <header>
-      <img src="acme-corp-logo.jpg" alt="ACME CORP"/>
-      <nav>
-        <ul>
-          <li><a>Products</a></li>
-          <li><button>Sign Up</button></li>
+      <img class="logo" src="images/acme-corp-logo.jpg" alt="ACME CORP"/>
+      <div class="navigation">
+        <ul id="nav">
+          <li>Products</li>
+          <button class="signup" type="button" name="button">Sign Up</button>
         </ul>
-      </nav>
+      </div>
     </header>
     <main>
       <h1>Welcome to ACME Corp!</h1>

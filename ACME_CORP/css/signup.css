@@ -1,0 +1,38 @@
+/* Sign Up page stylesheet */
+
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+.personal li {
+  font-size: 14px;
+  line-height: 40px;
+}
+.personal input {
+  border-radius: 3px;
+  border: 1px solid rgb(201, 200, 201);
+  height: 23px;
+  width: 200px;
+  padding-left: 4px;
+}
+input:required {
+  border-color: rgb(255, 0, 0);
+}
+input:valid {
+  border-color: rgb(104, 181, 30);
+}
+label {
+  display: inline-block;
+  width: 100px;
+}
+#checkbox {
+  width: 20px;
+}
+span {
+  font-size: 14px;
+}
+#signup-body {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+}

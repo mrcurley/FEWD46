@@ -1,0 +1,52 @@
+/* Products page stylesheet */
+
+h1 {
+  margin-top: 30px;
+}
+ul {
+  margin-left: -40px;
+  }
+.product {
+  margin: 1.5em;
+  overflow: auto;
+  list-style-type: none;
+}
+.product img {
+  float: left;
+  padding-right: 25px;
+  height: 150;
+  width: 180;
+}
+.product p {
+  margin-top: -1.5px;
+}
+
+/* 52:21 and 77:21 are the button width:height ratio */
+.details {
+  padding: 5px;
+  background-color: white;
+  height: 30px;
+  width: 75px;
+  font-family: "Lucida Grande";
+  font-size: 14;
+  color: rgb(9, 35, 251);
+  border: 1.75px solid rgb(9, 35, 251);
+  border-radius: 5px;
+}
+.add {
+  padding: 5px;
+  background-color: rgb(9, 35, 251);
+  height: 30px;
+  width: 103px;
+  font-family: "Lucida Grande";
+  font-size: 14;
+  color: white;
+  border: 1.75px solid rgb(9, 35, 251);
+  border-radius: 5px;
+}
+#hair {
+  height: 190;
+}
+#jet {
+  height: 115;
+}
