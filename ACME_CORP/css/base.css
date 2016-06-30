@@ -18,12 +18,6 @@ header {
   margin-left: 12px;
   line-height: normal;
 }
-/* (DELETE AFTER ADDING TO OTHER CSS SHEETS) a {
-  padding-top: 100px;
-  margin-right: 25px;
-  color: white;
-  text-shadow: 1px 1px 0px rgb(125, 125, 125);
-} */
 .signup {
   background-color: rgb(51, 60, 181);
   height: 42px;
@@ -35,31 +29,34 @@ header {
   box-shadow: none;
   font-family: "Lucida Grande", Helvetica, sans-serif;
   font-size: 16px;
-  float: right;
+  margin-left: 15px;
+}
+.signup a {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
 }
 body {
   background: url("../images/ACMEbackground.png");
   margin: 0;
 }
-.navigation {
-  float: right;
-  margin: 14 7;
-}
-#nav {
-  margin: 7 12;
-  list-style-type: none;
+nav {
+  margin: 8 18;
   float: right;
 }
-#nav ul {
-  line-height: 120%;
+button {
+  text-align: center;
 }
-#nav li {
-  float: left;
-  display: inline;
+a {
   color: white;
   text-shadow: 1px 1px 2px #000000;
   margin-top: 11px;
-  margin-right: 20px;
+  text-decoration: none;
+}
+nav li {
+  display: inline-block;
+  list-style-type: none;
 }
 main {
   background-color: white;
@@ -89,9 +86,3 @@ h6 {
   color: rgb(163, 167, 171);
   font-weight: 300;
 }
-
-@media screen and (max-width:700px) {
-  li {
-    color: blue;
-      }
-  }
