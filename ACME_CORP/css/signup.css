@@ -21,6 +21,10 @@ input:required {
 input:valid {
   border-color: rgb(104, 181, 30);
 }
+input:focus {
+  border: 2px solid blue;
+  outline: 0;
+}
 label {
   display: inline-block;
   width: 100px;
