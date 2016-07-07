@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding Numbers</title>
+  </head>
+  <body>
+    <input type="text" id="numA" placeholder="Enter a number">
+    <input type="text" id="numB" placeholder="Enter another number">
+    <button type="button" name="button">Sum</button>
+    <p></p>
+
+<script type="text/javascript">
+    var i1 = document.querySelector("#numA");
+    var i2 = document.querySelector("#numB");
+    var b = document.querySelector("button");
+    var p = document.querySelector("p");
+
+    function add() {
+      var n = parseInt(i1.value);
+      var m = parseInt(i2.value);
+      p.textContent = n + m;
+    }
+
+    b.addEventListener("click", add);
+
+</script>
+
+
+  </body>
+</html>
