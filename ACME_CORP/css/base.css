@@ -42,7 +42,7 @@ body {
   margin: 0;
 }
 nav {
-  margin: 8 18;
+  margin: 8px 18px;
   float: right;
 }
 button {
@@ -62,8 +62,8 @@ main {
   background-color: white;
   border: .5px solid rgb(191, 191, 191);
   border-radius: 10px;
-  margin: 30 50 0 50;
-  padding: 5 35 15 35;
+  margin: 30px 50px 0px 50px;
+  padding: 5px 35px 15px 35px;
   box-shadow: 0 0 4px rgb(170, 170, 170);
 }
 h1 {
@@ -75,7 +75,7 @@ p {
 hr {
   border-top: .25px solid rgb(195, 195, 195);
   border-bottom: .1px solid rgb(255, 255, 255);
-  margin: 30 50 10 50;
+  margin: 30px 50px 10px 50px;
 }
 footer {
   color: gray;

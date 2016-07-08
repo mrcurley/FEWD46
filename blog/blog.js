@@ -33,4 +33,5 @@ function comment(event) {
   var comment = document.querySelector("#comments");
   // display the text entry in a new block
   comment.textContent = entry;
+  document.querySelector("#new-comment-body").value = null;
 }

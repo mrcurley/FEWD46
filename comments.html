@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="what" value="">
+    <button type="button" id="button">Say it</button>
+
+  <script type="text/javascript">
+    var a = document.querySelector("#what");
+    var b = document.querySelector("#button");
+
+    b.addEventListener("click", what);
+
+    function what() {
+      var p = document.createElement("p");
+      p.textContent = a.value;
+      document.body.appendChild(p);
+    }
+
+  </script>
+  </body>
+</html>
