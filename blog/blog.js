@@ -30,8 +30,10 @@ function comment(event) {
   // assign attributes to the new "div"
   commentBox.setAttribute("class", "comment");
   // define variable for comment display
-  var comment = document.querySelector("#comments");
+  var newComment = document.querySelector("#comments");
   // display the text entry in a new block
-  comment.textContent = entry;
+  commentBox.textContent = entry;
+  newComment.appendChild(commentBox);
   document.querySelector("#new-comment-body").value = null;
+
 }
