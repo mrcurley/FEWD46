@@ -25,9 +25,12 @@ function comment(event) {
   var body = document.querySelector("#new-comment-body");
   // define the value of the body input
   var entry = body.value;
+  // create the new div element
+  var commentBox = document.createElement("div");
+  // assign attributes to the new "div"
+  commentBox.setAttribute("class", "comment");
   // define variable for comment display
-  var newDiv = document.querySelector("#comments");
+  var comment = document.querySelector("#comments");
   // display the text entry in a new block
-  newDiv.textContent = entry;
-  document.querySelector("#new-comment-body").value = null;
+  comment.textContent = entry;
 }
