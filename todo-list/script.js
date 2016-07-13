@@ -14,21 +14,17 @@ function formSubmitted(event) {
   var n = entry.value;
   var list = document.createElement("li");
   var ul = document.querySelector("ul");
+  var label = document.createElement("label");
+  var input = document.createElement("input");
+  var span = document.createElement("span");
+
   ul.appendChild(list);
   list.setAttribute("id", "#todo-list");
-  var label = document.createElement("label");
   list.appendChild(label);
-  label.setAttribute("for", "#todo-list");
-  var input = document.createElement("input");
   label.appendChild(input);
   input.setAttribute("type", "checkbox");
-  var span = document.createElement("span");
-  list.appendChild(span);
+  label.appendChild(span);
   span.textContent = n;
-
-  // ASSIGN FUNCTION TO CHECKBOX ON CLICK
-  //
-
 
   form.reset();
 }
