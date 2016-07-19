@@ -1,32 +1,39 @@
 var form = document.querySelector("#new-item-form");
+var entry = document.querySelector("#new-item-input");
 
-function formSubmitted(event) {
+form.addEventListener("submit", createToDos);
+
+function createToDos (event) {
   event.preventDefault();
-  // CREATE A LIST OF TO DO ITEMS IN THE PAGE
-  // define the input as a var
-  // define the value of the input as textContent
-  // create a list item
-  // create a label
-  // create an input
-  // create a span
 
-  var entry = document.querySelector("#new-item-input");
-  var n = entry.value;
-  var list = document.createElement("li");
-  var ul = document.querySelector("ul");
-  var label = document.createElement("label");
-  var input = document.createElement("input");
-  var span = document.createElement("span");
-
-  ul.appendChild(list);
-  list.setAttribute("id", "#todo-list");
-  list.appendChild(label);
-  label.appendChild(input);
-  input.setAttribute("type", "checkbox");
-  label.appendChild(span);
-  span.textContent = n;
-
+  var listItem = entry.value.split(",");
   form.reset();
+
+  listItem.forEach(createList);
+    function createList(i) {
+      var ul = document.querySelector("ul");
+      var list = document.createElement("li");
+      var label = document.createElement("label");
+      var input = document.createElement("input");
+      var span = document.createElement("span");
+
+      ul.appendChild(list);
+      list.appendChild(label);
+      label.appendChild(input);
+      label.appendChild(span);
+
+      list.setAttribute("id", "#todo-list");
+      input.setAttribute("type", "checkbox");
+
+      span.textContent = i.trim();
+  }
 }
 
-form.addEventListener("submit", formSubmitted);
+
+
+
+
+
+
+
+  //span.textContent = entry.value;
