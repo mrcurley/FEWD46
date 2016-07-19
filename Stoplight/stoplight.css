@@ -1,0 +1,60 @@
+button {
+  margin-bottom: 30px;
+}
+
+.lightpost {
+  width: 170px;
+  height: 400px;
+  background-color: rgb(235, 197, 4);
+  border: 3px solid rgb(197, 193, 54);
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.stop {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  background-color: rgb(94,78,20);
+  margin-top: 24px;
+  margin-left: 37px;
+  border: solid black;
+  border-width: 6px 2px 2px 2px;
+}
+
+.slow {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  background-color: rgb(94,78,20);
+  margin-top: 25px;
+  margin-left: 37px;
+  border: solid black;
+  border-width: 6px 2px 2px 2px;
+}
+
+.go {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  background-color: rgb(94,78,20);
+  margin-top: 25px;
+  margin-left: 37px;
+  border: solid black;
+  border-width: 6px 2px 2px 2px;
+}
+
+.stop-light {
+  background-color: rgb(193,66,37);
+  box-shadow: 0 0 10px rgb(193,66,37);
+}
+
+.slow-light {
+  background-color: rgb(254,236,86);
+  box-shadow: 0 0 10px rgb(254,236,86);
+}
+
+.go-light {
+  background-color: rgb(95,194,62);
+  box-shadow: 0 0 10px rgb(95,194,62);
+}
