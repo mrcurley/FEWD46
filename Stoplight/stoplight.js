@@ -14,21 +14,21 @@ var green = document.querySelector(".go");
 var flashing;
 
 function lightUpRed() {
-  red.classList.add("stop-light");
+  red.classList.toggle("stop-light");
   yellow.classList.remove("slow-light");
   green.classList.remove("go-light");
   clearInterval(flashing);
 }
 
 function lightUpYellow() {
-  yellow.classList.add("slow-light");
+  yellow.classList.toggle("slow-light");
   red.classList.remove("stop-light");
   green.classList.remove("go-light");
   clearInterval(flashing);
 }
 
 function lightUpGreen() {
-  green.classList.add("go-light");
+  green.classList.toggle("go-light");
   red.classList.remove("stop-light");
   yellow.classList.remove("slow-light");
   clearInterval(flashing);
