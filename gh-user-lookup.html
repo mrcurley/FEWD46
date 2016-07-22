@@ -1,0 +1,66 @@
+<form>
+  <input type="search" id="query" placeholder="GitHub username">
+  <input type="submit" value="Lookup">
+</form>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <td id="user-name"></td>
+  </tr>
+  <tr>
+    <th>Bio:</th>
+    <td id="user-bio"></td>
+  </tr>
+  <tr>
+    <th>Picture:</th>
+    <td id="user-picture"></td>
+  </tr>
+  <tr>
+    <th>Location:</th>
+    <td id="user-location"></td>
+  </tr>
+  <tr>
+    <th>Email:</th>
+    <td id="user-email"></td>
+  </tr>
+</table>
+
+<script>
+function get(url, callback) {
+  var request = new XMLHttpRequest();
+
+  request.open("GET", url, true);
+
+  request.addEventListener("readystatechange", handleReadyStateChange)
+
+  function handleReadyStateChange() {
+    if (request.readyState == 4 && request.status == 200) {
+      callback(request.responseText);
+    }
+  };
+
+  request.send();
+}
+var form = document.querySelector("form");
+var input = document.querySelector("#query");
+
+form.addEventListener("submit", showUserInfo);
+
+function showUserInfo(event) {
+  event.preventDefault();
+  var url = "https://api.github.com/users/" + input.value;
+  get(url, addUserInfo);
+}
+
+function addUserInfo(data) {
+  var userInfo = JSON.parse(data);
+  document.querySelector("#user-name").textContent = userInfo.name;
+  document.querySelector("#user-bio").textContent = userInfo.bio;
+  var img = document.createElement("img");
+  img.setAttribute("src", userInfo.avatar_url);
+  document.querySelector("#user-picture").appendChild(img);
+  document.querySelector("#user-location").textContent = userInfo.location;
+  document.querySelector("#user-email").textContent = userInfo.email;
+}
+</script>
