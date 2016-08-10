@@ -1,3 +1,16 @@
+// When the page loads
+// Look in local storage to see if the the list.html is there
+// If the html is there
+//    -Set the HTML of the list to the HTML in localStorage
+//    -element.innerHTML = ...
+// When the user adds an item
+//    -Do all the normal functions
+//    -Once the item is added to the list
+//    -Save the html of the list to localStorage - localStorage.setItem("...", el.innerHTML)
+
+var list=document.querySelector("#todo-list");
+list.innerHTML = localStorage.getItem("listHTML");
+
 var form = document.querySelector("#new-item-form");
 var entry = document.querySelector("#new-item-input");
 
@@ -26,7 +39,10 @@ function createToDos (event) {
       input.setAttribute("type", "checkbox");
 
       span.textContent = i.trim();
+
   }
+  localStorage.setItem("listHTML", list.innerHTML);
+
 }
 
 
