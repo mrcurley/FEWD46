@@ -1,0 +1,48 @@
+.hidden { display: none; }
+
+body { font-family: "Heebo"; }
+h1 { font-size: 40px; }
+h2 { font-size: 25px; }
+
+.header-wrapper div {
+  height: 100px;
+  font-family: "Heebo", sans-serif;
+}
+
+#header-styleA {
+  color: #c3c3c3;
+  font-weight: 300;
+  display: inline;
+}
+
+#header-styleB {
+  color: #e45a01;
+  font-weight: 400;
+  display: inline;
+}
+
+.header-wrapper {
+  text-align: center;
+}
+.header-wrapper h2 {
+  color: #c3c3c3;
+  font-weight: 300;
+}
+
+div.the-spread {
+  width: 800px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+div.food-icon  {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+
+.food-icon img {
+  height: 40%;
+  width: 40%;
+  padding-bottom: 80px;
+}
