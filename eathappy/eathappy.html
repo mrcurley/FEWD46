@@ -103,7 +103,7 @@
           <div class="food-icon" id="turkey" data-value="95">
             <img class="grow" src="images/turkey.png" alt="turkey" />
           </div>
-          <div class="food-icon" id="water" data-value="95">
+          <div class="food-icon" id="water" data-value="0">
             <img class="grow" src="images/water.png" alt="water" />
           </div>
           <div class="food-icon" id="whiskey" data-value="95">
@@ -117,45 +117,46 @@
           </div>
         </div> <!-- /the-spread -->
 
-        <button type="button" id="burn-button">BURN FIRST</button>
-
       </div> <!-- /food-screen -->
 
   <!--  ================SCREEN 2 STARTS HERE=============== -->
-      <div id="burn-screen">
+      <div id="burn-screen" class="hidden">
         <header class="header-wrapper">
-          <h1 id="header-styleA">BURN IT🏃</h1><h1 id="header-styleB">EARN IT🍴</h1>
-          <h2>
-            TACOS TASTE BETTER WHEN
-
-            <br>
-
-            YOU CAN EAT THEM GUILT FREE
-
-          </h2>
+          <div class="pep-talk"></div>
         </header>
 
         <div class="results">
           <div class="results-box bike-number">
               <h1 id="bike-total">0</h1>
-              <h3>BIKING minutes</h3>
+              <h4>BIKING minutes</h4>
           </div> <!--/results-box-->
 
         <div class="results-box walk-number">
             <h1 id="walk-total">0</h1>
-            <h3>WALKING minutes</h3>
+            <h4>WALKING minutes</h4>
         </div> <!--/results-box-->
 
         <div class="results-box run-number">
             <h1 id="run-total">0</h1>
-            <h3>RUNNING minutes</h3>
+            <h4>RUNNING minutes</h4>
         </div> <!--/results-box-->
       </div> <!--/results-->
 
       </div> <!--/burn-screen-->
     </div> <!--/page-wrap-->
 
+    <footer class="footer">
+      <div class="footer-text">
+        <h1 id="header-styleA">BURN IT🏃</h1><h1 id="header-styleB">EARN IT🍴</h1>
+        <h2>TACOS TASTES BETTER WHEN YOU CAN ENJOY IT GUILT FREE</h2>
+      </div> <!-- footer-text -->
+      <button type="button" id="burn-button">BURN FIRST</button>
+    </footer>
+
+
     <script type="text/javascript" src="eathappy.js"></script>
+
+
 
   </body>
 </html>

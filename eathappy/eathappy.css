@@ -1,11 +1,52 @@
 .hidden { display: none; }
 
-body { font-family: "Heebo"; }
-h1 { font-size: 40px; }
-h2 { font-size: 25px; }
+html { position: relative; min-height: 100%; }
+body { font-family: "Heebo"; margin: 0px 0px 100px; }
+h1   { font-size: 50px; }
+h2   { font-size: 32px; }
+h3   { font-size: 24px; }
+h4   { font-size: 20px; }
 
-#food-screen {
-  padding-bottom: 100px;
+/* === FOOTER === */
+
+footer h1 { font-size: 34px; }
+footer h2 { font-size: 22px; color: #ffffff; font-weight: lighter; margin-top: 0px; }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(86, 193, 156, 0.8);
+  padding: 30px 0px 10px;
+  line-height: 30px;
+}
+
+.results-footer {
+  background-color: transparent;
+}
+
+.footer-text {
+  height: 80px;
+  width: 60%;
+  display: inline-block;
+  padding-left: 30px;
+  text-align: center;
+}
+
+#burn-button {
+  width: 200px;
+  height: 60px;
+  background-color: #56c19c;
+  font-family: "Heebo", sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+  font-size: 22px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+  display: block;
+  float: left;
 }
 
 .header-wrapper div {
@@ -88,24 +129,24 @@ div.food-icon  {
   background: #e9e9e9;
 }
 
-#burn-button {
-  width: 200px;
-  height: 60px;
-  background-color: #56c19c;
-  font-family: "Heebo", sans-serif;
-  font-weight: lighter;
-  color: #ffffff;
-  font-size: 22px;
-  border: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 0 auto;
-  display: block;
-}
-
 /* ============ WORK PAGE CSS ============= */
 
 #burn-screen {
-  padding-bottom: 150px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.pep-talk {
+  background-color: #2e80f2;
+  width: 85%;
+  border-radius: 20px;
+}
+
+.pep-talk h3 {
+  color: white;
+  font-weight: lighter;
+  padding: 10px 20px;
+  text-align: left;
 }
 
 .results {
@@ -124,7 +165,7 @@ div.results-box {
   display: inline-block;
   vertical-align: top;
   margin: 0px 10px;
-  border-radius: 30px 0px;
+  border-radius: 50px 0px;
 }
 
 .bike-number h1 {
@@ -133,7 +174,7 @@ div.results-box {
   line-height: 100px;
 }
 
-.bike-number h3 {
+.bike-number h4 {
   font-weight: lighter;
   margin-top: 0px;
 }
@@ -144,7 +185,7 @@ div.results-box {
   line-height: 100px;
 }
 
-.walk-number h3 {
+.walk-number h4 {
   font-weight: lighter;
   margin-top: 0px;
 }
@@ -155,7 +196,7 @@ div.results-box {
   line-height: 100px;
 }
 
-.run-number h3 {
+.run-number h4 {
   font-weight: lighter;
   margin-top: 0px;
 }
