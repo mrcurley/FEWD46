@@ -30,7 +30,10 @@ function getItem(event) {
     var bikeCal = (data/150/0.00632);
     var walkCal = (data/150/0.048);
     var runCal = (data/150/0.079);
-    console.log(bikeCal);
+
+    $("#bike-total").text(bikeCal);
+    $("#walk-total").text(walkCal);
+    $("#run-total").text(runCal);
   }
 }
 
