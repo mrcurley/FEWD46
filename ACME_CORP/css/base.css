@@ -86,3 +86,19 @@ h6 {
   color: rgb(163, 167, 171);
   font-weight: 300;
 }
+
+@media (max-width: 470px) {
+  nav {
+    float: none;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  header {
+    height: auto;
+    text-align: center;
+  }
+  .logo {
+    margin-left: 0px;
+  }
+}
