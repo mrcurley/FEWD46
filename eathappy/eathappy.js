@@ -27,9 +27,9 @@ function getItem(event) {
   $("#burn-button").on("click", getCalories);
 
   function getCalories () {
-    var bikeCal = (data/150*0.00632);
-    var walkCal = (data/150*0.048);
-    var runCal = (data/150*0.079);
+    var bikeCal = (data/150/0.00632);
+    var walkCal = (data/150/0.048);
+    var runCal = (data/150/0.079);
     console.log(bikeCal);
   }
 }
