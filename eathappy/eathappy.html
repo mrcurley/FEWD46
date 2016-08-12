@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="page-wrap">
-      <div id="food-screen">
+      <div id="food-screen" class="hidden">
 
         <div class="header-wrapper">
           <h1 id="header-styleA">WHO'S</h1><h1 id="header-styleB">HUNGRY?</h1>
@@ -26,7 +26,7 @@
 
         <div class="the-spread">
           <div class="food-icon" id="apple">
-            <img class="grow" src="images/apple.png" alt="apple" />
+            <img class="grow" src="images/apple.png" alt="apple" data-value="95"/>
           </div>
           <div class="food-icon" id="bacon">
             <img class="grow" src="images/bacon.png" alt="bacon" />
@@ -122,7 +122,7 @@
       </div> <!-- /food-screen -->
 
   <!--  ================SCREEN 2 STARTS HERE=============== -->
-      <div id="burn-screen" class="hidden">
+      <div id="burn-screen">
         <header class="header-wrapper">
           <h1 id="header-styleA">BURN IT🏃</h1><h1 id="header-styleB">EARN IT🍴</h1>
           <h2>
@@ -136,22 +136,19 @@
         </header>
 
         <div class="results">
-          <div class="results-box">
-            <span class="walk-number">
-              <h1>10</h1>
-            </span>
+          <div class="results-box walk-number">
+              <h1>90</h1>
+              <h3>WALKING minutes</h3>
           </div> <!--/results-box-->
 
-        <div class="results-box">
-          <span class="bike-number">
-            <h1>6</h1>
-          </span>
+        <div class="results-box bike-number">
+            <h1>60</h1>
+            <h3>BIKING minutes</h3>
         </div> <!--/results-box-->
 
-        <div class="results-box">
-          <span class="run-number">
-            <h1>3</h1>
-          </span>
+        <div class="results-box run-number">
+            <h1>30</h1>
+            <h3>RUNNING minutes</h3>
         </div> <!--/results-box-->
       </div> <!--/results-->
 
