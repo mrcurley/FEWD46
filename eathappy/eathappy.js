@@ -23,6 +23,7 @@ function getItem(event) {
   var foodIcon = $(event.target).parents(".food-icon");
   var data = foodIcon.data("value");
   foodIcon.toggleClass("active");
+  $(".footer").removeClass("hidden");
 
   $("#burn-button").on("click", getCalories);
 
@@ -32,6 +33,7 @@ function getItem(event) {
 
     $(".footer").addClass("results-footer");
     $(".footer-text").text("");
+
     $("#burn-button").text("PICK AGAIN");
 
     var bikeCal = parseInt(data/150/0.00632);
@@ -54,6 +56,7 @@ function getItem(event) {
       feedback.appendTo(pepTalk);
     }
   }
+  //$("#burn-button").on("click", window.location.reload());
 }
 
 
