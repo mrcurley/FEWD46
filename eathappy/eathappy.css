@@ -226,6 +226,34 @@ div.results-box {
   margin-top: 20px;
 }
 
+.next-steps {
+  width: 500px;
+  height: 100px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.next-steps button {
+  width: 40%;
+  height: 60px;
+  background-color: #ffffff;
+  font-family: "Heebo", sans-serif;
+  font-weight: lighter;
+  color: #e45a01;
+  font-size: 22px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  margin: 60px 5px 0px;
+}
+
+#eat-now-button {
+  background-color: #e45a01;
+  color: #ffffff;
+}
+
+/* ==== Media Queries ==== */
+
 @media (max-width: 600px) {
   div.food-icon { width: 50%; }
   footer { height: 130px; padding-top: 20px; background-color: rgba(85, 85, 85, 0.8); }

@@ -20,6 +20,7 @@
 $(".food-icon").on("click", getItem);
 
 function getItem(event) {
+  event.preventDefault();
   var foodIcon = $(event.target).parents(".food-icon");
   var data = foodIcon.data("value");
   foodIcon.toggleClass("active");
@@ -32,11 +33,7 @@ function getItem(event) {
   function getCalories () {
     $("#food-screen").addClass("hidden");
     $("#burn-screen").removeClass("hidden");
-
-    $(".footer").addClass("results-footer");
-    $(".footer-text").text("");
-
-    $("#burn-button").text("PICK AGAIN");
+    $(".footer").addClass("hidden");
 
     var bikeCal = parseInt(data/150/0.00632);
     var walkCal = parseInt(data/150/0.048);
@@ -58,8 +55,9 @@ function getItem(event) {
       feedback.appendTo(pepTalk);
     }
   }
-  //$("#burn-button").on("click", window.location.reload());
 }
+
+
 
 
 
