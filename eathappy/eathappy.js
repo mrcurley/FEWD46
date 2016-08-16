@@ -23,7 +23,9 @@ function getItem(event) {
   var foodIcon = $(event.target).parents(".food-icon");
   var data = foodIcon.data("value");
   foodIcon.toggleClass("active");
-  $(".footer").removeClass("hidden");
+  $(".footer").animate({
+    height: "100px", padding: "30px 0px 10px"
+  });
 
   $("#burn-button").on("click", getCalories);
 
