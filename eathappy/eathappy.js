@@ -3,18 +3,21 @@
 // add class for active to the div
 // get data value of image and set as var
 
-$(".food-icon").on("click", getItem);
+$(".food-icon").one("click", getItem);
 
 // Get food item selection data
 function getItem(event) {
   event.preventDefault();
+
   var foodIcon = $(event.target).parents(".food-icon");
   var data = foodIcon.data("value");
   var foodItem = foodIcon.attr("name");
 
-  foodIcon.toggleClass("active");
+  $(".food-icon").removeClass("active");
+  foodIcon.addClass("active");
+
   $(".footer").animate({
-    height: "10%", padding: "30px 0px 10px"
+    height: "20%", padding: "30px 0px 10px"
   });
 
 // Calculate Calories and load results
@@ -47,13 +50,48 @@ function getItem(event) {
   }
 
 // Restaurant Finder
-  $("#eat-now-button").on("click", findRestaurants);
+  $("#eat-now-button").on("click", function() {
+    navigator.geolocation.getCurrentPosition(getPlaces);
+  });
 
-  function findRestaurants () {
+  // Geolocation
+  function getPlaces(position) {
+    console.log(position);
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    callYelp(lat, long);
+  }
 
+  // get Yelp json data
+  function callYelp(lat, long) {
+    event.preventDefault();
+    var url = "http://proxy.avandamiri.com/yelp/search?latitude=" + lat +
+      "&longitude=" + long + "&term=" + escape(foodItem);
+    $.get(url, showPlaces);
+  }
+
+  function showPlaces(response) {
+    response["businesses"].forEach(addRestaurant);
+  }
+
+  function addRestaurant(restaurant) {
+    var listItem = $("<li>").addClass("restaurants");
+    var name = $("<div>").addClass("rest-name");
+    var address = $("<div>").addClass("rest-address");
+    var rating = $("<div>").addClass("rest-rating");
+
+    name.text(restaurant["name"]);
+    address.text(restaurant["display_address"]);
+    rating.text(restaurant["rating_img_url"]);
+
+    listItem.appendTo($(".restaurant-list"));
+    name.appendTo(listItem);
+    address.appendTo(listItem);
+    rating.appendTo(listItem);
   }
 
 }
+
 
 
 // findRestaurants
