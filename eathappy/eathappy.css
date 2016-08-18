@@ -80,6 +80,25 @@ footer {
   margin-top: 0px;
 }
 
+#food-screen {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  animation-name: slideDown;
+  animation-duration: 800ms;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0.25;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 div.arrow {
   color: #c3c3c3;
   font-weight: 300;

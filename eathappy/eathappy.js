@@ -25,7 +25,8 @@ function getItem(event) {
   // Calculate Calories and load results
   $("#burn-button").on("click", getCalories);
 
-  function getCalories () {
+  function getCalories (event) {
+    event.preventDefault();
     $("#food-screen").addClass("hidden");
     $("#burn-screen").removeClass("hidden");
     $(".footer").addClass("hidden");
@@ -53,6 +54,10 @@ function getItem(event) {
 
 
   // Restaurant Finder
+  $("#start-again-button").on("click", function() {
+    window.location.reload(true);
+  });
+
   $("#eat-now-button").on("click", function() {
     navigator.geolocation.getCurrentPosition(getPlaces);
   });
