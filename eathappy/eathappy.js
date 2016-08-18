@@ -30,6 +30,7 @@ function getItem(event) {
     $("#food-screen").addClass("hidden");
     $("#burn-screen").removeClass("hidden");
     $(".footer").addClass("hidden");
+    $("#food-pick").text(foodItem);
 
     var bikeCal = parseInt(data/150/0.00632);
     var walkCal = parseInt(data/150/0.048);
@@ -45,11 +46,48 @@ function getItem(event) {
       feedback.appendTo(pepTalk);
     }
 
-    else if (data == 95,226,91,124,40,275,65) {
+    else if (data == 670 || data == 400 || data == 647 || data == 231 || data == 258 || data == 550 || data == 400 || data == 309 || data == 300 || data == 267 || data == 180 || data == 84) {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("You sure you want to do that?");
+      feedback.appendTo(pepTalk);
+    }
+
+    else if (data == 95 || data == 226 || data == 91 || data == 124 || data == 40 || data == 275 || data == 65 || data == 154 || data == 184) {
       var pepTalk = $(".pep-talk");
       var feedback = $("<h3>").text("👏🏻👏🏻👏🏻 Excellent choice! Keep on fighting the good fight against donuts, cheeseburgers and bacon.");
       feedback.appendTo(pepTalk);
     }
+
+    else if (data == 280) {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("Mmmmmmmmmm, pizza 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
+      feedback.appendTo(pepTalk);
+    }
+
+    else if (data == 270) {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("This super-fish increases cardiovascular strength, reduces risk of depression, is an excellent source of Vitamin D and prevents cell damage. Salmon FTW!");
+      feedback.appendTo(pepTalk);
+    }
+
+    else if (data == 80) {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("Um, have you ever had a flat white?");
+      feedback.appendTo(pepTalk);
+    }
+
+    else if (data == 146 || data == 90 || data == 105 || data == 123) {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("Gotta take the edge of somehow, eh? If you choose to drink, keep it moderate. One drink a day for women and two for men!");
+      feedback.appendTo(pepTalk);
+    }
+
+    else {
+      var pepTalk = $(".pep-talk");
+      var feedback = $("<h3>").text("How do you like em? 🍳 Poached, scrambled, fried, sunny-side up?");
+      feedback.appendTo(pepTalk);
+    }
+
   }
 
 

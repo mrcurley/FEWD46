@@ -70,6 +70,12 @@ footer {
   display: inline;
 }
 
+#header-styleC {
+  color: #e45a01;
+  font-weight: lighter;
+  display: inline;
+}
+
 .header-wrapper {
   text-align: center;
   padding-top: 40px;
@@ -221,9 +227,10 @@ div.results-box {
   font-size: 120px;
   margin: 50px 0px 0px;
   line-height: 100px;
+  text-shadow: 0px 4px 4px rgb(67, 153, 123);
 }
 
-.bike-number h4 {
+.bike-number h3 {
   font-weight: lighter;
   margin-top: 20px;
 }
@@ -232,9 +239,10 @@ div.results-box {
   font-size: 80px;
   margin: 50px 0px 0px;
   line-height: 100px;
+  text-shadow: 0px 4px 4px rgb(67, 153, 123);
 }
 
-.walk-number h4 {
+.walk-number h3 {
   font-weight: lighter;
   margin-top: 20px;
 }
@@ -243,9 +251,10 @@ div.results-box {
   font-size: 65px;
   margin: 50px 0px 0px;
   line-height: 100px;
+  text-shadow: 0px 4px 4px rgb(67, 153, 123);
 }
 
-.run-number h4 {
+.run-number h3 {
   font-weight: lighter;
   margin-top: 20px;
 }
@@ -341,6 +350,7 @@ span#food-pick {
 @media only screen and (max-device-width: 410px) {
   #header-styleA { font-size: 38px; }
   #header-styleB { font-size: 38px; }
+  #header-styleC { font-size: 38px; }
   .header-wrapper { padding-top: 20px; }
   .header-wrapper h2 { font-size: 20px; }
 
