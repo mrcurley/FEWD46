@@ -30,7 +30,7 @@ function getItem(event) {
     $("#food-screen").addClass("hidden");
     $("#burn-screen").removeClass("hidden");
     $(".footer").addClass("hidden");
-    $("#food-pick").text(foodItem);
+    $(".food-pick").text(foodItem);
 
     var bikeCal = parseInt(data/150/0.00632);
     var walkCal = parseInt(data/150/0.048);
@@ -127,13 +127,13 @@ function getItem(event) {
   }
 
   function addRestaurant(restaurant) {
-    $("#food-pick").text(foodItem);
+    //$("#food-pick").text(foodItem);
 
     var listItem = $("<li>").addClass("restaurants");
     var name = $("<div>").addClass("rest-name").text(restaurant["name"]).attr("href", restaurant["mobile_url"]);
     var address = $("<div>").addClass("rest-address").text(
-      restaurant.location.display_address[0]+ " " +
-      restaurant.location.display_address[1]+ " " +
+      restaurant.location.display_address[0]+ " | " +
+      restaurant.location.display_address[1]+ " | " +
       restaurant.location.display_address[2]
     );
     var rating = $("<img>").addClass("rest-rating").attr("src", restaurant["rating_img_url"]);

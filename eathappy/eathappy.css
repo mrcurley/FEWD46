@@ -294,7 +294,7 @@ div.results-box {
   animation-duration: 1s;
 }
 
-span#food-pick {
+span.food-pick {
   color: #555555;
 }
 
