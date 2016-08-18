@@ -5,22 +5,24 @@
 
 $(".food-icon").one("click", getItem);
 
+
 // Get food item selection data
 function getItem(event) {
   event.preventDefault();
 
   var foodIcon = $(event.target).parents(".food-icon");
   var data = foodIcon.data("value");
-  var foodItem = foodIcon.attr("name");
+  var foodItem = $(this).attr("name");
 
   $(".food-icon").removeClass("active");
   foodIcon.addClass("active");
 
   $(".footer").animate({
-    height: "20%", padding: "30px 0px 10px"
+    height: "12%", padding: "30px 0px 10px"
   });
 
-// Calculate Calories and load results
+
+  // Calculate Calories and load results
   $("#burn-button").on("click", getCalories);
 
   function getCalories () {
@@ -49,10 +51,12 @@ function getItem(event) {
     }
   }
 
-// Restaurant Finder
+
+  // Restaurant Finder
   $("#eat-now-button").on("click", function() {
     navigator.geolocation.getCurrentPosition(getPlaces);
   });
+
 
   // Geolocation
   function getPlaces(position) {
@@ -62,7 +66,8 @@ function getItem(event) {
     callYelp(lat, long);
   }
 
-  // get Yelp json data
+
+  //get Yelp json data
   function callYelp(lat, long) {
     event.preventDefault();
     var url = "http://proxy.avandamiri.com/yelp/search?latitude=" + lat +
@@ -71,18 +76,24 @@ function getItem(event) {
   }
 
   function showPlaces(response) {
+    $("#burn-screen").addClass("hidden");
+    $("#eat-screen").removeClass("hidden");
+
+    console.log(response);
     response["businesses"].forEach(addRestaurant);
   }
 
   function addRestaurant(restaurant) {
-    var listItem = $("<li>").addClass("restaurants");
-    var name = $("<div>").addClass("rest-name");
-    var address = $("<div>").addClass("rest-address");
-    var rating = $("<div>").addClass("rest-rating");
+    $("#food-pick").text(foodItem);
 
-    name.text(restaurant["name"]);
-    address.text(restaurant["display_address"]);
-    rating.text(restaurant["rating_img_url"]);
+    var listItem = $("<li>").addClass("restaurants");
+    var name = $("<div>").addClass("rest-name").text(restaurant["name"]).attr("href", restaurant["mobile_url"]);
+    var address = $("<div>").addClass("rest-address").text(
+      restaurant.location.display_address[0]+ " " +
+      restaurant.location.display_address[1]+ " " +
+      restaurant.location.display_address[2]
+    );
+    var rating = $("<img>").addClass("rest-rating").attr("src", restaurant["rating_img_url"]);
 
     listItem.appendTo($(".restaurant-list"));
     name.appendTo(listItem);
