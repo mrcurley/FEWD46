@@ -315,22 +315,14 @@ span#food-pick {
 
 /* ==== Media Queries ==== */
 
-@media (max-width: 800px) {
+@media only screen and (max-device-width: 800px) {
   footer #header-styleA { display: none; }
   footer #header-styleB { display: none; }
   footer h2 { font-size: 20px; }
   .footer-text { margin-left: 5%; }
 }
 
-@media (max-width: 600px) {
-  div.food-icon { width: 50%; }
-  footer { background-color: rgba(85, 85, 85, 0.8); }
-  .footer-text { height: 40px; width: 100%; margin-left: 0px; }
-  #burn-button { margin-right: 0px; width: 100%; }
-  div.the-spread { padding-left: 30px; padding-right: 30px; }
-}
-
-@media (max-width: 760px) {
+@media only screen and (max-device-width: 760px) {
   div.results-box { width: 60%; margin-top: 15px; margin-bottom: 15px; }
   .pep-talk { width: 80%; }
 
@@ -338,7 +330,15 @@ span#food-pick {
   .restaurant-list { margin-left: 0px; margin-top: 50px; }
 }
 
-@media (max-width: 410px) {
+@media only screen and (max-device-width: 600px) {
+  div.food-icon { width: 50%; }
+  footer { background-color: rgba(85, 85, 85, 0.8); }
+  .footer-text { height: 40px; width: 100%; margin-left: 0px; }
+  #burn-button { margin-right: 0px; width: 100%; }
+  div.the-spread { padding-left: 30px; padding-right: 30px; }
+}
+
+@media only screen and (max-device-width: 410px) {
   #header-styleA { font-size: 38px; }
   #header-styleB { font-size: 38px; }
   .header-wrapper { padding-top: 20px; }
