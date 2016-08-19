@@ -114,7 +114,7 @@ function getItem(event) {
   //get Yelp json data
   function callYelp(lat, long) {
     event.preventDefault();
-    var url = "http://proxy.avandamiri.com/yelp/search?latitude=" + lat +
+    var url = "https://proxee.herokuapp.com/yelp/search?latitude=" + lat +
       "&longitude=" + long + "&term=" + escape(foodItem);
     $.get(url, showPlaces);
   }
