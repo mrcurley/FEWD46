@@ -18,7 +18,7 @@ function getItem(event) {
   foodIcon.addClass("active");
 
   $(".footer").animate({
-    height: "12%", padding: "30px 0px 10px"
+    height: "12%", padding: "30px 0px 60px"
   });
 
 
