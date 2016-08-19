@@ -31,12 +31,16 @@ footer {
   margin: 0 auto;
 }
 
-.footer-text {
+.footer-text-active {
   height: 80px;
   width: 40%;
   display: inline-block;
   margin-left: 15%;
   text-align: center;
+}
+
+.footer-text {
+  display: none;
 }
 
 #burn-button {

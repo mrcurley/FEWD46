@@ -17,6 +17,7 @@ function getItem(event) {
   $(".food-icon").removeClass("active");
   foodIcon.addClass("active");
 
+  $("#footer-content").removeClass("footer-text").addClass("footer-text-active");
   $(".footer").animate({
     height: "12%", padding: "30px 0px 60px"
   });
